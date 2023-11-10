@@ -3,8 +3,8 @@ const ctx = canvas.getContext("2d");
 canvas.width = canvas.clientWidth;
 canvas.height = canvas.clientHeight;
 let car = {
-  width: 35,
-  height: 100,
+  width: 25,
+  height: 90,
   x: canvas.width / 2,
   y: 0,
   varSpeed: 0.3,
@@ -81,6 +81,9 @@ function animate() {
   } else if (car.x >= canvas.width - car.width) {
     car.varSpeed += -Math.abs(car.varSpeed) * 2;
   }
+  if (car.y >= canvas.height) {
+    car.y = canvas.width - car.width;
+  }
   requestAnimationFrame(animate);
   drawCar();
 }
@@ -104,8 +107,8 @@ function animateTouch() {
 if (navigator.platform === "Win32") {
   animate();
 } else {
-  animateTouch();
 }
+animateTouch();
 drawCar();
 window.addEventListener("keyup", controlsKeyUp);
 window.addEventListener("keydown", controlsKeyDown);
