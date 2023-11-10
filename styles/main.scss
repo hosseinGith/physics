@@ -1,0 +1,25 @@
+@font-face {
+  font-family: vazir;
+  src: url(../assets/fonts/vazir/Vazir.ttf) format("truetype");
+  src: url(../assets/fonts/vazir/Vazir.woff) format("woff");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bbb;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+canvas {
+  height: 100vh;
+  width: 50%;
+  max-width: 400px;
+  background-color: #fff;
+}
