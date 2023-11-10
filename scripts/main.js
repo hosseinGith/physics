@@ -91,14 +91,14 @@ function animateTouch() {
   if (car.varSpeed <= car.maxSpeed) car.varSpeed += 0.2;
   car.y += car.varSpeed;
   if (car.y <= 0) {
-    car.varSpeed += -car.varSpeed * 1.3;
+    car.varSpeed += -car.varSpeed * 2;
   } else if (car.y >= canvas.height - car.height) {
-    car.varSpeed += -Math.abs(car.varSpeed) * 1.3;
+    car.varSpeed += -Math.abs(car.varSpeed) * 2;
   }
   if (car.x <= 0) {
-    car.varSpeed += -car.varSpeed * 1.3;
+    car.varSpeed += -car.varSpeed * 2;
   } else if (car.x >= canvas.width - car.width) {
-    car.varSpeed += -Math.abs(car.varSpeed) * 1.3;
+    car.varSpeed += -Math.abs(car.varSpeed) * 2;
   }
   if (car.y >= canvas.height + 20) {
     car.y = 0;
