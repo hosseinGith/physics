@@ -100,7 +100,7 @@ function animateTouch() {
   } else if (car.x >= canvas.width - car.width) {
     car.varSpeed += -Math.abs(car.varSpeed) * 1.3;
   }
-  if (car.y >= canvas.height - car.height - 10) {
+  if (car.y >= canvas.height - car.height - 80) {
     car.y = 0;
   }
   drawCar();
