@@ -55,8 +55,6 @@ function touchEnd(e) {
   e.preventDefault();
   isTouchStart = false;
   car.varSpeed = 0.3;
-  controls.down = false;
-  controls.up = false;
 }
 
 function animate() {
@@ -101,6 +99,9 @@ function animateTouch() {
     car.varSpeed += -car.varSpeed * 1.3;
   } else if (car.x >= canvas.width - car.width) {
     car.varSpeed += -Math.abs(car.varSpeed) * 1.3;
+  }
+  if (car.y >= canvas.height) {
+    car.y = 0;
   }
   drawCar();
 }
