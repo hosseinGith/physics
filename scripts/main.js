@@ -6,7 +6,7 @@ let car = {
   width: 35,
   height: 100,
   x: canvas.width / 2,
-  y: canvas.height / 2,
+  y: 0,
   varSpeed: 0.3,
   maxSpeed: 10,
 };
